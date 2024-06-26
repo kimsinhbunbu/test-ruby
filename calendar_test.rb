@@ -23,10 +23,8 @@ def print_calendar_of_year(year)
     (1..last_day_of_month.day).each do |day|
       print day.to_s.rjust(3)
       start_day_of_week +=1
-      if start_day_of_week > 7
-        start_day_of_week = 1
-        puts ""
-       end
+    #   reset start day and /n
+      start_day_of_week = 1 and puts "" if start_day_of_week > 7
     end 
 
     puts "\n\n"
