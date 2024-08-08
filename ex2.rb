@@ -23,18 +23,18 @@ def get_index(str, arr_words)
       end
       result << i if j == word_count
     end
-    result.empty? ? "not found" : result.inspect
+    puts result.empty? ? "not found" : result.inspect
   end
   
   str = "mainamthenammaibun"
   arr_words = ["nam", "mai"]
-  puts get_index(str, arr_words)
+  get_index(str, arr_words)
   
   str = "thinhnghianghianghiatuyenthinh"
   arr_words = ["thinh", "nghia", "tuyen", "thinh"]
-  puts get_index(str, arr_words) 
+  get_index(str, arr_words) 
   
   str = "mainamnammaichinammaibun"
   arr_words = ["mai", "nam", "chi"]
-  puts get_index(str, arr_words) 
+  get_index(str, arr_words) 
   

@@ -12,10 +12,10 @@ def print_calendar_of_year(year)
     date_names.each do |date_name|
         print " "+date_name
     end
-    puts ""
+    puts
 
     first_day_of_month = Date.new(year, month, 1)
-    last_day_of_month = Date.new(year, month, -1)
+    last_day_of_month = first_day_of_month.next_month - 1
     start_day_of_week = first_day_of_month.strftime("%u").to_i
 
     print "   " * (start_day_of_week - 1)
